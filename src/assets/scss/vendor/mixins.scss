@@ -1,0 +1,23 @@
+//Fonts
+
+@mixin TimesNewRoman-Italic {
+  font-family: 'TimesNewRoman', sans-serif;
+  font-style: normal;
+  font-style: italic;
+  font-weight: 400;
+  color: $white;
+}
+
+@mixin Montserrat-regular {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: $white;
+}
+
+@mixin Montserrat-medium {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: $white;
+}
