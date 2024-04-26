@@ -31,35 +31,13 @@
   }
 
   &__button-close {
+    padding: 0;
+    border: none;
+    width: 21.6px;
+    height: 21.6px;
+    background-color: unset;
     position: absolute;
-    right: 0;
-  }
-}
-
-@media (max-width: 1023px) {
-  .popup {
-    &__logo {
-      &-img {
-        height: 40px;
-      }
-    }
-
-    &__contact-us {
-      padding: 40px 30px;
-      gap: 0px;
-      grid-template-columns: auto;
-      grid-template-areas: 'logo' 'socials';
-    }
-
-    &_with-image {
-      width: 100%;
-      .popup__background {
-        display: none;
-      }
-      .popup__window {
-        width: 100%;
-        grid-template-columns: calc(50% - 20px) calc(50% - 20px) 40px;
-      }
-    }
+    right: -30px;
+    top: -10px;
   }
 }
