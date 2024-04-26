@@ -17,21 +17,36 @@
 
   <footer class="footer"></footer>
 
-  <div class="popup popup_type_window popup__brouchure popup_opened">
+  <div class="popup popup_opened">
     <div class="popup__window">
       <div class="popup__contact-us">
-        <div class="socials">
-          <h3 class="socials__title">contact us right now</h3>
-          <span class="socials__item socials__item_type_tg">telegram</span>
-          <span class="socials__item socials__item_type_wa">whatsapp</span>
+        <div class="description">
+          <h3 class="description__title">Don't Miss<br />The Unique Offer</h3>
+          <p class="description__text">
+            Be the first to experience the beauty of Keturah Resort at our
+            exclusive private screening event! Leave your contact information
+            below to receive an invitation to our special event.
+          </p>
+          <div class="socials">
+            <span class="socials__item socials__item_type_tg"
+              ><img
+                src="<%=require('../src/assets/images/iconoir_telegram-circle.svg')%>"
+              />
+              Telegram</span
+            >
+            <span class="socials__item socials__item_type_wa"
+              ><img
+                src="<%=require('../src/assets/images/icons8-whatsapp.svg')%>"
+              />WhatsApp</span
+            >
+          </div>
         </div>
       </div>
       <form class="form form_type_brochure">
-        <h2 class="form__title">download<br />Ffff</h2>
         <input type="text" class="form__input" placeholder="Your name" />
         <input type="email" class="form__input" placeholder="Your e-mail" />
         <input type="number" class="form__input" placeholder="Your phone" />
-        <button class="button button_light">Download brochure</button>
+        <button class="button button_light">Join now</button>
       </form>
       <button
         class="button button_light popup__button-close popup__button_type_window"
