@@ -1,3 +1,15 @@
+@keyframes example {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 103%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
 .description {
   background-image: url(../../images/modal-background.png);
   background-repeat: no-repeat;
@@ -8,16 +20,18 @@
   width: fit-content;
   padding: 80px 25px;
   text-align: center;
+  animation: example ease-in 5s infinite;
 
   &__title {
+    margin: 0;
     @include TimesNewRoman-Italic;
     font-size: 45px;
     line-height: 45px;
-    margin: 0;
     color: $white;
   }
 
   &__text {
+    margin: 0;
     @include Montserrat-medium;
     font-size: 16px;
     line-height: 24px;

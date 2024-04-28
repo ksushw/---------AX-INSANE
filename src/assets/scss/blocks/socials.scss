@@ -11,12 +11,16 @@
     align-items: center;
     gap: 10px;
 
+    transition: 0.3s;
+    cursor: pointer;
+
     &:hover {
-      text-decoration: underline;
+      opacity: 0.8;
+      transform: scale(1.05);
     }
 
     &:active {
-      opacity: 0.8;
+      opacity: 0.5;
     }
   }
 }

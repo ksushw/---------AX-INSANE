@@ -39,5 +39,17 @@
     position: absolute;
     right: -30px;
     top: -10px;
+
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 }
