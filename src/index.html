@@ -11,13 +11,37 @@
     <title>EMAAR</title>
   </head>
 
-  <header class="header"></header>
-
-  <body class="body"></body>
+  <body class="body">
+    <section class="main-page">
+      <header class="header">
+        <img
+          class="header__logo header__item"
+          src="<%=require('./assets/images/company-logo.svg')%>"
+        />
+        <div class="socials header__socials header__item">
+          <span class="socials__item socials__item_type_tg"
+            ><img
+              src="<%=require('../src/assets/images/iconoir_telegram-circle.svg')%>"
+            />
+          </span>
+          <span class="socials__item socials__item_type_wa"
+            ><img
+              src="<%=require('../src/assets/images/icons8-whatsapp.svg')%>"
+          /></span>
+        </div>
+        <span class="header__number header__item">+9989XXXXX</span>
+      </header>
+      <button class="main-page__button">
+        Download brochure<img
+          src="<%=require('./assets/images/download-logo.svg')%>"
+        />
+      </button>
+    </section>
+  </body>
 
   <footer class="footer"></footer>
 
-  <div class="popup popup_opened">
+  <div class="popup">
     <div class="popup__window">
       <div class="popup__contact-us">
         <div class="description">
