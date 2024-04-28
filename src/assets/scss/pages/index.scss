@@ -1,3 +1,4 @@
+@import '@photo-sphere-viewer/core/index.css';
 @import '../vendor/normalize.scss';
 
 @import '../vendor/variables.scss';
@@ -16,3 +17,5 @@
 
 @import './main-page.scss';
 @import '../blocks/projects.scss';
+
+@import '../blocks//panorama.scss';

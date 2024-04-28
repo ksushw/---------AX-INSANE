@@ -30,6 +30,7 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
+    "@photo-sphere-viewer/core": "^5.7.3",
     "core-js": "^3.30.1"
   }
 }
