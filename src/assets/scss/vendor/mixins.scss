@@ -8,6 +8,13 @@
   color: $white;
 }
 
+@mixin Montserrat-semibold {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: $white;
+}
+
 @mixin Montserrat-regular {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
