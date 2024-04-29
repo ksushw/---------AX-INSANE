@@ -12,11 +12,19 @@
   visibility: hidden;
   transition: 0.3s;
   opacity: 0;
-  background-color: $black;
 
   &_opened {
     visibility: visible;
     opacity: 1;
+  }
+
+  &_panorama {
+    background-color: #00000099;
+    backdrop-filter: blur(10px);
+  }
+
+  &_info {
+    background-color: black;
   }
 
   &__window {
@@ -26,7 +34,6 @@
     height: min-content;
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     position: relative;
   }
 
@@ -39,7 +46,6 @@
     position: absolute;
     right: -30px;
     top: -10px;
-
     transition: 0.3s;
     cursor: pointer;
 
