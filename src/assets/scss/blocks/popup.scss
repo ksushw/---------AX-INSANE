@@ -58,4 +58,14 @@
       opacity: 0.5;
     }
   }
+
+  @media (max-width: 767px) {
+    &__window {
+      grid-template-columns: auto;
+      width: 65%;
+    }
+    &__contact-us {
+      display: none;
+    }
+  }
 }
