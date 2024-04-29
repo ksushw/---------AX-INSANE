@@ -1,53 +1,38 @@
-import '../src/assets/scss/pages/index.scss';
-import { Viewer } from '@photo-sphere-viewer/core';
-import image from '../src/assets/images/3D-park.png';
-// import '@photo-sphere-viewer/core/index.css';
 import { Popup } from './assets/components/Popup';
 import { Panorama } from './assets/components/Panorama';
+import park from './assets/images/3D-park.png';
+import mansions from './assets/images/3D-mansions.png';
+import road from './assets/images/3D-road.png';
+import apartments from './assets/images/3D-apartments.png';
 
-// Popus open/close logic
-const sliderButtons = document.querySelectorAll('.slider__button');
-const detailsPopup = document.querySelector('.popup__details');
+const images = {
+  park: park,
+  road: road,
+  mansions: mansions,
+  apartments: apartments,
+};
 
-const aboutButton = document.querySelector('.about__button');
-const brochurePopup = document.querySelector('.popup__brouchure');
+const buttonInfoPopup = document.querySelector('.main-page__button');
+const panoramaButtons = document.querySelectorAll('.projects__link');
 
-const popupUniqueOffer = document.querySelector('.popup__unique-offer');
+const infoPopup = document.querySelector('.popup_info');
+const panoramaPopup = document.querySelector('.popup_panorama');
+console.log(infoPopup);
 
-// const uniqueOffer = new Popup(popupUniqueOffer);
-// const brochure = new Popup(brochurePopup);
-// const details = new Popup(detailsPopup);
+const modalInfoPopup = new Popup(infoPopup);
+const modalPanoramaPopup = new Popup(panoramaPopup);
+
 const panorama = new Panorama();
 
-// console.log(sliderButtons);
-// setTimeout(() => uniqueOffer.open(), 30000);
-// aboutButton.addEventListener('click', () => {
-//   brochure.open();
-// });
+buttonInfoPopup.addEventListener('click', () => {
+  modalInfoPopup.open();
+});
 
-// sliderButtons.forEach((sliderButton) => {
-//   sliderButton.addEventListener('click', () => {
-//     console.log(12);
-//     details.open();
-//   });
-// });
-// const viewer = new Viewer({
-//   container: document.querySelector('.panorama'),
-//   panorama: image,
-//   navbar: [
-//     'zoom',
-//     {
-//       id: 'my-button',
-//       content: '<svg...>',
-//       title: 'Hello world',
-//       className: 'custom-button',
-//       onClick: (viewer) => {
-//         alert('Hello from custom button');
-//       },
-//     },
-//     'caption',
-//     'fullscreen',
-//   ],
-// });
-
-panorama.open();
+panoramaButtons.forEach((panoramaButton) => {
+  panoramaButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const linkId = e.target.closest('.projects__link').id;
+    panorama.open(images[linkId]);
+    modalPanoramaPopup.open();
+  });
+});

@@ -1,13 +1,14 @@
 import { Viewer } from '@photo-sphere-viewer/core';
-import image from '../images/3D-park.png';
 
 class Panorama {
   constructor() {
-    this.image = image;
+    this.container = document.querySelector('.panorama');
+    this.viewer;
   }
 
-  open() {
-    const viewer = new Viewer({
+  open(image) {
+    this.close();
+    this.viewer = new Viewer({
       container: document.querySelector('.panorama'),
       panorama: image,
       navbar: [
@@ -28,19 +29,9 @@ class Panorama {
   }
 
   close() {
-    document.removeEventListener('keyup', this._handleEscClose);
-    this.popup.classList.remove('popup_opened');
-  }
-
-  _handleEscClose(evt) {
-    if (evt.key === 'Escape') {
-      this.close();
+    if (this.viewer) {
+      this.viewer.destroy();
     }
-  }
-
-  setEventListeners() {
-    this.closeIcon.addEventListener('click', () => this.close());
-    // this.overlay.addEventListener("click", () => this.close());
   }
 }
 
