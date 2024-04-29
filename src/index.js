@@ -1,28 +1,19 @@
+import '../src/assets/scss/index.scss';
 import { Popup } from './assets/components/Popup';
 import { Panorama } from './assets/components/Panorama';
-import park from './assets/images/3D-park.png';
-import mansions from './assets/images/3D-mansions.png';
-import road from './assets/images/3D-road.png';
-import apartments from './assets/images/3D-apartments.png';
-
-const images = {
-  park: park,
-  road: road,
-  mansions: mansions,
-  apartments: apartments,
-};
-
-const buttonInfoPopup = document.querySelector('.main-page__button');
-const panoramaButtons = document.querySelectorAll('.projects__link');
-
-const infoPopup = document.querySelector('.popup_info');
-const panoramaPopup = document.querySelector('.popup_panorama');
-console.log(infoPopup);
+import { images } from './assets/constants/panorama-images';
+import {
+  infoPopup,
+  panoramaPopup,
+  buttonInfoPopup,
+  panoramaButtons,
+  panoramaContainer,
+} from './assets/constants/selectors.js';
 
 const modalInfoPopup = new Popup(infoPopup);
 const modalPanoramaPopup = new Popup(panoramaPopup);
 
-const panorama = new Panorama();
+const panorama = new Panorama(panoramaContainer);
 
 buttonInfoPopup.addEventListener('click', () => {
   modalInfoPopup.open();

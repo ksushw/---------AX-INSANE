@@ -1,15 +1,15 @@
 import { Viewer } from '@photo-sphere-viewer/core';
 
 class Panorama {
-  constructor() {
-    this.container = document.querySelector('.panorama');
+  constructor(containerSelector) {
+    this.container = containerSelector;
     this.viewer;
   }
 
   open(image) {
     this.close();
     this.viewer = new Viewer({
-      container: document.querySelector('.panorama'),
+      container: this.container,
       panorama: image,
       navbar: [
         'zoom',
