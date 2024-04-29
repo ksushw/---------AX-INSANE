@@ -59,10 +59,17 @@
     }
   }
 
+  @media (max-width: 940px) {
+    &__window {
+      margin-right: 40px;
+    }
+  }
+
   @media (max-width: 767px) {
     &__window {
       grid-template-columns: auto;
       width: 65%;
+      margin: 0;
     }
     &__contact-us {
       display: none;
