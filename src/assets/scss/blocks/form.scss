@@ -30,7 +30,7 @@
     line-height: 27px;
     color: $black;
 
-    transition: 0.3s;
+    transition: opacity, transform 0.3s;
     cursor: pointer;
 
     &:hover {

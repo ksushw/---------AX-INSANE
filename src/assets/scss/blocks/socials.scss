@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: 0.3s;
+    transition: opacity, transform 0.3s;
     cursor: pointer;
 
     &:hover {
